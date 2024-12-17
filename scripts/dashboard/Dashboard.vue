@@ -266,7 +266,7 @@ async function lockWallet() {
 /**
  * Sends a transaction
  * @param {string} address - Address or contact to send to
- * @param {number} amount - Amount of AIPGs to send
+ * @param {number} amount - Amount of MEWCs to send
  */
 async function send(address, amount) {
     // Ensure a wallet is unlocked
@@ -542,7 +542,7 @@ defineExpose({
             </div>
             <!-- // Lock Wallet -->
 
-            <!-- Redeem Code (AIPG Promos) -->
+            <!-- Redeem Code (MEWC Promos) -->
             <div
                 class="modal"
                 id="redeemCodeModal"
@@ -564,7 +564,7 @@ defineExpose({
                                 style="
                                     text-align: center;
                                     width: 100%;
-                                    color: #8e21ff;
+                                    color: #B08224;
                                 "
                             >
                                 Redeem Code
@@ -573,11 +573,11 @@ defineExpose({
                         <div class="modal-body center-text">
                             <center>
                                 <p class="mono" style="font-size: small">
-                                    <b>AIPG Promos</b>
+                                    <b>MEWC Promos</b>
                                     <span
                                         style="font-family: inherit !important"
                                     >
-                                        {{ translation.aipgPromos }}
+                                        {{ translation.mewcPromos }}
                                     </span>
                                 </p>
                                 <div id="redeemCodeModeBox">
@@ -585,7 +585,7 @@ defineExpose({
                                         type="button"
                                         onclick="MPW.setPromoMode(true)"
                                         id="redeemCodeModeRedeem"
-                                        class="aipg-button-big"
+                                        class="mewc-button-big"
                                         style="
                                             margin: 0;
                                             border-top-right-radius: 0;
@@ -599,7 +599,7 @@ defineExpose({
                                         type="button"
                                         onclick="MPW.setPromoMode(false)"
                                         id="redeemCodeModeCreate"
-                                        class="aipg-button-big"
+                                        class="mewc-button-big"
                                         style="
                                             margin: 0;
                                             border-top-left-radius: 0;
@@ -617,7 +617,7 @@ defineExpose({
                                         <div
                                             class="input-group"
                                             style="
-                                                border-color: #9121ff;
+                                                border-color: #B08224;
                                                 border-style: solid;
                                                 border-radius: 10px;
                                             "
@@ -691,7 +691,7 @@ defineExpose({
                                                 <div
                                                     class="input-group"
                                                     style="
-                                                        border-color: #9121ff;
+                                                        border-color: #B08224;
                                                         border-style: solid;
                                                         border-radius: 10px;
                                                     "
@@ -718,7 +718,7 @@ defineExpose({
                                                 <div
                                                     class="input-group"
                                                     style="
-                                                        border-color: #9121ff;
+                                                        border-color: #B08224;
                                                         border-style: solid;
                                                         border-radius: 10px;
                                                     "
@@ -791,7 +791,7 @@ defineExpose({
                                 type="button"
                                 onclick="MPW.promoConfirm()"
                                 id="redeemCodeModalConfirmButton"
-                                class="aipg-button-big"
+                                class="mewc-button-big"
                                 style="float: right"
                             >
                                 Redeem
@@ -800,7 +800,7 @@ defineExpose({
                                 type="button"
                                 data-dismiss="modal"
                                 aria-label="Close"
-                                class="aipg-button-big"
+                                class="mewc-button-big"
                                 style="float: right; opacity: 0.7"
                             >
                                 {{ translation.popupClose }}
@@ -809,7 +809,7 @@ defineExpose({
                     </div>
                 </div>
             </div>
-            <!-- // Redeem Code (AIPG Promos) -->
+            <!-- // Redeem Code (MEWC Promos) -->
 
             <!-- Contacts Modal -->
             <div
@@ -833,7 +833,7 @@ defineExpose({
                                 style="
                                     text-align: center;
                                     width: 100%;
-                                    color: #d5adff;
+                                    color: #B08224;
                                 "
                             >
                                 {{ translation.contacts }}
@@ -847,9 +847,9 @@ defineExpose({
                                 type="button"
                                 data-dismiss="modal"
                                 aria-label="Close"
-                                class="aipg-button-big"
+                                class="mewc-button-big"
                                 data-i18n="popupClose"
-                                style="color: #fff; float: right; opacity: 0.8"
+                                style="float: right; opacity: 0.8"
                             >
                                 Close
                             </button>
@@ -874,7 +874,7 @@ defineExpose({
                     :isEncrypt="wallet.isEncrypted.value"
                 />
                 <div class="row p-0">
-                    <!-- Balance in AIPG & USD-->
+                    <!-- Balance in MEWC & USD-->
                     <WalletBalance
                         :balance="balance"
                         :immatureBalance="immatureBalance"
@@ -884,6 +884,7 @@ defineExpose({
                         :currency="currency"
                         :price="price"
                         :displayDecimals="displayDecimals"
+                        :wallet="wallet"
                         @reload="refreshChainData()"
                         @send="showTransferMenu = true"
                         @exportPrivKeyOpen="showExportModal = true"

@@ -50,7 +50,7 @@ async function getWalletDataset() {
         arrBreakdown.push({
             type: translation.chartPublicAvailable,
             balance: spendable_bal / COIN,
-            colour: 'rgba(127, 17, 224, 1)',
+            colour: 'rgba(176, 129, 36, 1)',
         });
     }
 
@@ -98,7 +98,7 @@ async function getWalletDataset() {
  * Create the initial Wallet Breakdown chart configuration and UI rendering
  */
 export async function generateWalletBreakdown(arrBreakdown) {
-    // Render the AIPG logo in the centre of the "Wallet Doughnut"
+    // Render the MEWC logo in the centre of the "Wallet Doughnut"
     const image = new Image();
     const svg = (await import('../assets/logo-circle.svg')).default;
     const url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));

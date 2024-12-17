@@ -22,6 +22,7 @@ const props = defineProps({
     currency: String,
     price: Number,
     displayDecimals: Number,
+    wallet: Object,
 });
 const {
     jdenticonValue,
@@ -185,7 +186,7 @@ function reload() {
                                         data-target="#exportPrivateKeysModal"
                                         data-backdrop="static"
                                         data-keyboard="false"
-                                        v-if="!isHardwareWallet"
+                                        v-if="!isHardwareWallet && !wallet.isViewOnly.value"
                                         @click="$emit('exportPrivKeyOpen')"
                                     >
                                         <i class="fas fa-key"></i>
@@ -215,18 +216,6 @@ function reload() {
                                             }}</span
                                         >
                                     </a>
-                                    <a
-                                        class="dropdown-item ptr"
-                                        data-toggle="modal"
-                                        data-target="#redeemCodeModal"
-                                    >
-                                        <i class="fa-solid fa-gift"></i>
-                                        <span
-                                            >&nbsp;{{
-                                                translation.redeemOrCreateCode
-                                            }}</span
-                                        >
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -248,7 +237,7 @@ function reload() {
                 data-toggle="modal"
                 data-target="#walletBreakdownModal"
             >
-                <span class="dcWallet-aipgBalance" v-html="balanceStr"> </span>
+                <span class="dcWallet-mewcBalance" v-html="balanceStr"> </span>
                 <i
                     class="fa-solid fa-plus"
                     v-if="immatureBalance != 0"
@@ -260,7 +249,7 @@ function reload() {
                     v-html="immatureBalanceStr"
                 ></span>
                 <span
-                    class="dcWallet-aipgTicker"
+                    class="dcWallet-mewcTicker"
                     style="position: relative; left: 4px"
                     >&nbsp;{{ ticker }}&nbsp;</span
                 >

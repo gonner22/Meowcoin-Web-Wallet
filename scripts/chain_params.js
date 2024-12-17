@@ -16,7 +16,7 @@ export const MAX_ACCOUNT_GAP = 20;
 export const MIN_PASS_LENGTH = 6;
 
 /** BIP21 coin prefix */
-export const BIP21_PREFIX = 'aipg';
+export const BIP21_PREFIX = 'mewc';
 
 /* chainparams */
 export const cChainParams = reactive({
@@ -25,27 +25,24 @@ export const cChainParams = reactive({
         name: 'mainnet',
         collateralInSats: 10000 * COIN,
         isTestnet: false,
-        TICKER: 'AIPG',
-        PUBKEY_PREFIX: ['A'],
-        STAKING_PREFIX: 'A',
-        PUBKEY_ADDRESS: 23,
-        STAKING_ADDRESS: 23,
-        SECRET_KEY: 128,
-        BIP44_TYPE: 2686,
+        TICKER: 'MEWC',
+        PUBKEY_PREFIX: ['M'],
+        STAKING_PREFIX: 'M',
+        PUBKEY_ADDRESS: 50,
+        STAKING_ADDRESS: 122,
+        SECRET_KEY: 112,
+        BIP44_TYPE: 1669,
         BIP44_TYPE_LEDGER: 77,
-        PROTOCOL_VERSION: 70926,
-        MASTERNODE_PORT: 8865,
+        PROTOCOL_VERSION: 70030,
+        MASTERNODE_PORT: 8788,
         // A list of Labs-trusted explorers
         Explorers: [
             // Display name      Blockbook-compatible API base
-            { name: 'AIPG BlockBook', url: 'https://blockbook.aipowergrid.io' },
+            { name: 'MEWC BlockBook', url: 'https://blockbook.mewccrypto.com' },
         ],
         Nodes: [
-	    { name: 'AIPG US', url: 'https://us-seed1.aipowergrid.io' },
-	    { name: 'AIPG Japan', url: 'https://jp-seed2.aipowergrid.io' },
-	    { name: 'AIPG Australia', url: 'https://au-seed3.aipowergrid.io' },
-	    { name: 'AIPG Europe', url: 'https://eu-seed4.aipowergrid.io' },
-	    { name: 'AIPG India', url: 'https://in-seed4.aipowergrid.io' },
+	    { name: 'MEWC Node 1', url: 'seed-mainnet-mewc.meowcoin.cc' },
+	    { name: 'MEWC Node 2', url: 'dnsseed.nodeslist.xyz' },
 	],
         Consensus: {
             // Network upgrades
@@ -56,31 +53,31 @@ export const cChainParams = reactive({
         proposalFee: 50 * COIN,
         proposalFeeConfirmRequirement: 6,
         maxPaymentCycles: 6,
-        maxPayment: 10 * 43200 * COIN, // 43200 blocks of 10 AIPG
-        defaultColdStakingAddress: 'AdgQDpS8jDRJDX8yK8m9KnTMarsE84zdsy', // Labs Cold Pool
+        maxPayment: 10 * 43200 * COIN, // 43200 blocks of 10 MEWC
+        defaultColdStakingAddress: 'MdgQDpS8jDRJDX8yK8m9KnTMarsE84zdsy', // Labs Cold Pool
     },
     testnet: {
         name: 'testnet',
         collateralInSats: 10000 * COIN,
         isTestnet: true,
-        TICKER: 'tAIPG',
-        PUBKEY_PREFIX: ['a', 'a'],
-        STAKING_PREFIX: 'a',
-        PUBKEY_ADDRESS: 23,
-        STAKING_ADDRESS: 23,
-        SECRET_KEY: 239,
+        TICKER: 'tMEWC',
+        PUBKEY_PREFIX: ['m', 'm'],
+        STAKING_PREFIX: 'm',
+        PUBKEY_ADDRESS: 109,
+        STAKING_ADDRESS: 124,
+        SECRET_KEY: 114,
         BIP44_TYPE: 1,
         BIP44_TYPE_LEDGER: 1,
-        PROTOCOL_VERSION: 70926,
-        MASTERNODE_PORT: 18865,
+        PROTOCOL_VERSION: 70030,
+        MASTERNODE_PORT: 4969,
         // A list of Labs-trusted explorers
         Explorers: [
             // Display name      Blockbook-compatible API base
-            { name: 'AIPG Blockbook', url: 'https://blockbook.aipowergrid.io' },
+            { name: 'MEWC Blockbook', url: 'https://blockbook.mewccrypto.com' },
         ],
         Nodes: [
-	    { name: 'AIPG TestNode1', url: 'seed1-testnet.aipowergrid.io' },
-	    { name: 'AIPG TestNode2', url: 'seed2-testnet.aipowergrid.io' },
+	    { name: 'MEWC TestNode1', url: 'seed-mainnet-mewc.meowcoin.cc' },
+	    { name: 'MEWC TestNode2', url: 'dnsseed.nodeslist.xyz' },
 	],
         Consensus: {
             // Network upgrades
@@ -91,8 +88,8 @@ export const cChainParams = reactive({
         proposalFee: 50 * COIN,
         proposalFeeConfirmRequirement: 3,
         maxPaymentCycles: 20,
-        maxPayment: 10 * 144 * COIN, // 144 blocks of 10 tAIPG
-        defaultColdStakingAddress: 'amNziUEPyhnUkiVdfsiNX93H6rSJnios44', // Sparrow's Testnet Cold Pool
+        maxPayment: 10 * 144 * COIN, // 144 blocks of 10 tMEWC
+        defaultColdStakingAddress: 'mmNziUEPyhnUkiVdfsiNX93H6rSJnios44', // Sparrow's Testnet Cold Pool
     },
 });
 // Set default chain

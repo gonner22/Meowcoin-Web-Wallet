@@ -13,7 +13,7 @@ const emit = defineEmits([
     'update:amount',
     'update:address',
 ]);
-// Amount of AIPGs to send in the selected currency (e.g. USD)
+// Amount of MEWCs to send in the selected currency (e.g. USD)
 const amountCurrency = ref('');
 const color = ref('');
 
@@ -164,8 +164,8 @@ async function selectContact() {
                                                 margin: 0px 1px;
                                                 background: linear-gradient(
                                                     183deg,
-                                                    #9621ff9c,
-                                                    #7d21ffc7
+                                                    #B08224,
+                                                    #5D4521
                                                 );
                                                 color: #fff;
                                                 font-weight: bold;
@@ -174,7 +174,7 @@ async function selectContact() {
                                             {{ translation.sendAmountCoinsMax }}
                                         </div>
                                     </span>
-                                    <span class="input-group-text">AIPG</span>
+                                    <span class="input-group-text">MEWC</span>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,7 @@ async function selectContact() {
 
                     <div class="text-right pb-2">
                         <button
-                            class="aipg-button-medium w-100"
+                            class="mewc-button-medium w-100"
                             style="margin: 0px"
                             @click="send()"
                             data-testid="sendButton"
@@ -265,7 +265,7 @@ async function selectContact() {
     min-height: 155px;
     transition: 0.4s;
     /*background-color:rgba(255, 255, 255, 12%)!important;*/
-    background-color: #5d2f83c9;
+    background-color: #B08224;
 }
 
 @media (min-width: 768px) {

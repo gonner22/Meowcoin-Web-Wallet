@@ -43,6 +43,7 @@ export const cChainParams = reactive({
         Nodes: [
 	    { name: 'MEWC Node 1', url: 'seed-mainnet-mewc.meowcoin.cc' },
 	    { name: 'MEWC Node 2', url: 'dnsseed.nodeslist.xyz' },
+	    { name: 'MEWC Node 3', url: 'seed2-mainnet-mewc.testtopper.site' },
 	],
         Consensus: {
             // Network upgrades

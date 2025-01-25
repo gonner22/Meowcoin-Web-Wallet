@@ -1,0 +1,18 @@
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+/*! #__NO_SIDE_EFFECTS__ */
+
+/*! noble-hashes - MIT License (c) 2022 Paul Miller (paulmillr.com) */
+
+/*! noble-secp256k1 - MIT License (c) 2019 Paul Miller (paulmillr.com) */
+
+/**
+* @vue/shared v3.5.13
+* (c) 2018-present Yuxi (Evan) You and Vue contributors
+* @license MIT
+**/
